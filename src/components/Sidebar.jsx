@@ -1,3 +1,4 @@
+// src/components/Sidebar.jsx
 import React from "react";
 
 const Sidebar = ({ activeSection, scrollToSection }) => {
@@ -9,7 +10,7 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
 
   return (
     <div className="h-full bg-[#0a192f] text-white flex flex-col justify-between">
-      {/* Top Section: Name, Title, Short Bio - Always visible */}
+      {/* Top Section: Name, Title, Short Bio - No photo here anymore */}
       <div>
         <h1 className="text-4xl font-bold leading-tight">
           Anish
@@ -43,8 +44,8 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
                   <div
                     className={`h-px mr-4 transition-all duration-200 ease-in-out ${
                       activeSection === item.id
-                        ? "w-16 bg-green-accent" // Changed from w-8 to w-16 for active state
-                        : "w-8 bg-grey-text group-hover:w-16 group-hover:bg-green-accent" // Changed from w-4 to w-8 and group-hover:w-8 to group-hover:w-16
+                        ? "w-16 bg-green-accent"
+                        : "w-8 bg-grey-text group-hover:w-16 group-hover:bg-green-accent"
                     }`}
                   ></div>
                   <span
@@ -63,11 +64,13 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
 
       {/* Bottom Section: Social Links and Contact Info */}
       <div className="flex flex-col space-y-4 text-sm text-grey-text mt-8 lg:mt-0">
+        {/* Social Links - Still hidden on mobile, visible on large screens */}
         <div className="hidden lg:flex space-x-4">
           <a href="#">GitHub</a>
           <a href="https://www.linkedin.com/in/anishshanbhag/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
 
+        {/* Contact Information - Now visible on all screens */}
         <div className="mt-4 lg:mt-0">
           <p className="flex items-center">
             <span className="mr-2 text-green-accent">
