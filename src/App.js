@@ -4,108 +4,108 @@ import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import MouseSpotlight from "./components/MouseSpotlight";
-import Footer from "./components/FooterCTA"; // Changed import from FooterCTA to Footer
+import Footer from "./components/FooterCTA";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("about");
-  const mainContentScrollRef = useRef(null);
+	const [activeSection, setActiveSection] = useState("about");
+	const mainContentScrollRef = useRef(null);
 
-  const sectionRefs = {
-    about: useRef(null),
-    experience: useRef(null),
-    projects: useRef(null),
-  };
+	const sectionRefs = {
+		about: useRef(null),
+		experience: useRef(null),
+		projects: useRef(null),
+	};
 
-  useEffect(() => {
-    const observerOptions = {
-      root: mainContentScrollRef.current,
-      rootMargin: "0px 0px -70% 0px", // Adjusted rootMargin: Trigger when top of section is 30% from top of viewport
-      threshold: 0, // We want to observe any intersection
-    };
+  	useEffect(() => {
+		const observerOptions = {
+			root: mainContentScrollRef.current,
+			rootMargin: "0px 0px -70% 0px", // Adjusted rootMargin: Trigger when top of section is 30% from top of viewport
+			threshold: 0, // We want to observe any intersection
+		};
 
-    const observerCallback = (entries) => {
-      let highestIntersectionRatioEntry = null;
-      let highestIntersectionRatio = 0;
-      let closestToTopEntry = null;
-      let minTopDistance = Infinity;
+		const observerCallback = (entries) => {
+			let highestIntersectionRatioEntry = null;
+			let highestIntersectionRatio = 0;
+			let closestToTopEntry = null;
+			let minTopDistance = Infinity;
 
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Prioritize by intersection ratio first (how much of it is visible)
-          if (entry.intersectionRatio > highestIntersectionRatio) {
-            highestIntersectionRatio = entry.intersectionRatio;
-            highestIntersectionRatioEntry = entry;
-          }
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					// Prioritize by intersection ratio first (how much of it is visible)
+					if (entry.intersectionRatio > highestIntersectionRatio) {
+						highestIntersectionRatio = entry.intersectionRatio;
+						highestIntersectionRatioEntry = entry;
+					}
 
-          // Also keep track of the one whose top is closest to the root's top
-          // This helps when multiple sections are partially visible
-          const rect = entry.boundingClientRect;
-          const rootRect = mainContentScrollRef.current.getBoundingClientRect();
-          const topDistance = rect.top - rootRect.top;
+					// Also keep track of the one whose top is closest to the root's top
+					// This helps when multiple sections are partially visible
+					const rect = entry.boundingClientRect;
+					const rootRect = mainContentScrollRef.current.getBoundingClientRect();
+					const topDistance = rect.top - rootRect.top;
 
-          if (topDistance >= 0 && topDistance < minTopDistance) { // Only consider sections whose top is at or below the root's top
-            minTopDistance = topDistance;
-            closestToTopEntry = entry;
-          }
-        }
-      });
+					if (topDistance >= 0 && topDistance < minTopDistance) { // Only consider sections whose top is at or below the root's top
+						minTopDistance = topDistance;
+						closestToTopEntry = entry;
+					}
+				}
+			});
 
-      let newActiveSectionId = activeSection;
+			let newActiveSectionId = activeSection;
 
-      // Logic to determine the single active section:
-      // 1. If any section has a very high intersection ratio, prioritize it
-      if (highestIntersectionRatioEntry && highestIntersectionRatioEntry.intersectionRatio > 0.7) { // More than 70% visible
-        newActiveSectionId = highestIntersectionRatioEntry.target.id;
-      }
-      // 2. Otherwise, if there's a section whose top is closest to the scroll container's top and is visible
-      else if (closestToTopEntry) {
-        newActiveSectionId = closestToTopEntry.target.id;
-      }
-      // 3. Fallback: If nothing else, use the first section if it's visible at all
-      else if (entries.length > 0 && entries[0].isIntersecting) {
-        newActiveSectionId = entries[0].target.id;
-      }
+			// Logic to determine the single active section:
+			// 1. If any section has a very high intersection ratio, prioritize it
+			if (highestIntersectionRatioEntry && highestIntersectionRatioEntry.intersectionRatio > 0.7) { // More than 70% visible
+				newActiveSectionId = highestIntersectionRatioEntry.target.id;
+			}
+			// 2. Otherwise, if there's a section whose top is closest to the scroll container's top and is visible
+			else if (closestToTopEntry) {
+				newActiveSectionId = closestToTopEntry.target.id;
+			}
+			// 3. Fallback: If nothing else, use the first section if it's visible at all
+			else if (entries.length > 0 && entries[0].isIntersecting) {
+				newActiveSectionId = entries[0].target.id;
+			}
 
-      if (newActiveSectionId && newActiveSectionId !== activeSection) {
-        setActiveSection(newActiveSectionId);
-      }
-    };
+			if (newActiveSectionId && newActiveSectionId !== activeSection) {
+				setActiveSection(newActiveSectionId);
+			}
+		};
 
 
-    let observer;
-    if (mainContentScrollRef.current) {
-      observer = new IntersectionObserver(observerCallback, observerOptions);
+		let observer;
+		if (mainContentScrollRef.current) {
+			observer = new IntersectionObserver(observerCallback, observerOptions);
 
-      Object.values(sectionRefs).forEach((ref) => {
-        if (ref.current) {
-          observer.observe(ref.current);
-        }
-      });
-    }
+			Object.values(sectionRefs).forEach((ref) => {
+				if (ref.current) {
+				observer.observe(ref.current);
+				}
+			});
+		}
 
-    return () => {
-      if (observer) {
-        Object.values(sectionRefs).forEach((ref) => {
-          if (ref.current) {
-            observer.unobserve(ref.current);
-          }
-        });
-        observer.disconnect();
-      }
-    };
-  }, [activeSection]); // Keep activeSection in dependency array
+		return () => {
+			if (observer) {
+				Object.values(sectionRefs).forEach((ref) => {
+					if (ref.current) {
+						observer.unobserve(ref.current);
+					}
+				});
+				observer.disconnect();
+			}
+		};
+  	}, [activeSection]); // Keep activeSection in dependency array
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section && mainContentScrollRef.current) {
-      const offset = 20; // You can adjust this value as needed
-      const offsetTop = section.offsetTop - offset;
-      mainContentScrollRef.current.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
+  	const scrollToSection = (id) => {
+		const section = document.getElementById(id);
+		if (section && mainContentScrollRef.current) {
+			const offset = 20; // You can adjust this value as needed
+			const offsetTop = section.offsetTop - offset;
+			mainContentScrollRef.current.scrollTo({
+				top: offsetTop,
+				behavior: "smooth",
+			});
+		}
+  	};
 
   return (
     <div className="grid lg:grid-cols-[2fr_3fr] h-screen text-white bg-[#0a192f]">
