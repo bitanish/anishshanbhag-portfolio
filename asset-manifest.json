@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/anishshanbhag-portfolio/static/css/main.21251e0a.css",
-    "main.js": "/anishshanbhag-portfolio/static/js/main.ea89b323.js",
+    "main.js": "/anishshanbhag-portfolio/static/js/main.2c6836ad.js",
     "index.html": "/anishshanbhag-portfolio/index.html",
     "main.21251e0a.css.map": "/anishshanbhag-portfolio/static/css/main.21251e0a.css.map",
-    "main.ea89b323.js.map": "/anishshanbhag-portfolio/static/js/main.ea89b323.js.map"
+    "main.2c6836ad.js.map": "/anishshanbhag-portfolio/static/js/main.2c6836ad.js.map"
   },
   "entrypoints": [
     "static/css/main.21251e0a.css",
-    "static/js/main.ea89b323.js"
+    "static/js/main.2c6836ad.js"
   ]
 }
