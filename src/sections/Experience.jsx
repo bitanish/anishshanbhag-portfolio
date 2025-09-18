@@ -64,7 +64,7 @@ const Experience = () => {
 
       <div className="mt-16 text-center lg:text-left">
         <a
-          href="/anishshanbhag.pdf"
+          href={`${process.env.PUBLIC_URL}/anishshanbhag.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center text-green-accent font-semibold text-sm
