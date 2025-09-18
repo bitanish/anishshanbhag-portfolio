@@ -8,8 +8,8 @@ module.exports = {
       fontFamily: {
         // Ensure 'Inter' is correctly imported and listed first.
         // This makes Inter the default sans-serif font for your project.
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
-        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+        display: ["Montserrat", "sans-serif"],   // Headings
+        body: ["Inter", "sans-serif"],             // Body text
       },
       colors: {
         // Your existing dark-navy

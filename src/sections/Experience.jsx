@@ -1,50 +1,49 @@
 import React from "react";
 
 const experiences = [
-  // ... (your existing experience data) ...
   {
-    year: "2023 — Present",
-    title: "Senior Frontend Engineer, Accessibility · Klaviyo",
+    year: "Jun 2023 — May 2025",
+    title: "Senior Software Engineer, Forward Deployed · Bluecore",
     description:
-      "Build and maintain critical components used to construct Klaviyos frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-    tags: ["JavaScript", "TypeScript", "React", "Storybook"],
+      "At Bluecore, I architected 100+ reliable ETL workflows (Python, SQL), developed JavaScript integrations for Fortune 500 retailers like Nike and CVS capturing millions of daily events, and acted as a technical point-of-contact for client onboarding, monitoring, and integrations.",
+    tags: ["Python", "Javascript", "SQL", "YAML", "Google Cloud"],
   },
   {
-    year: "2018 — 2023",
-    title: "Lead Engineer · Upstatement",
+    year: "Apr 2021 — Jun 2023",
+    title: "Software Engineer · Chariot Group",
     description:
-      "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
-    tags: ["JavaScript", "TypeScript", "React", "Storybook"],
+      "At Chariot Group, I led development of a full-stack e-commerce platform (React, Django, AWS) handling 10K+ monthly transactions, deployed scalable cloud infrastructure with CI/CD and AWS Lambda, and implemented secure authentication with OWASP best practices.",
+    tags: ["Django", "React", "AWS"],
   },
   {
-    year: "July — Dec 2017",
-    title: "UI Engineer Co-op · Apple",
+    year: "Jul 2020 — Nov 2020",
+    title: "Associate Software Engineer · LogMeIn",
     description:
-      "Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.",
-    tags: ["JavaScript", "TypeScript", "React", "Storybook"],
+      "At LogMeIn, I automated network operations by building a monitoring dashboard and AWS Lambda functions, reducing downtime investigation from 45 minutes to under 2 minutes.",
+    tags: ["React", "AWS Lambda", "AWS SNS", "AWS Direct Connect"],
   },
 ];
 
 const Experience = () => {
   return (
     <div className="text-lightest-slate">
-      <h2 className="text-3xl font-bold mb-8 text-white">Experience</h2>
-      <div className="space-y-16">
+      <h2 className="text-3xl font-bold mb-8 text-white font-display">Experience</h2>
+      <div className="space-y-16 font-body">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="group flex flex-col lg:flex-row gap-4 lg:gap-16 p-4 lg:p-6 rounded-lg
-                       transition-all duration-300 ease-in-out
-                       hover:bg-light-navy hover:shadow-lg"
+            className="group flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-16 p-4 lg:p-6 rounded-lg
+                      transition-all duration-300 ease-in-out
+                      hover:bg-light-navy hover:shadow-lg"
           >
-            <div className="w-full lg:w-1/4 text-grey-text text-sm mb-2 lg:mb-0">
+            <div className="w-full lg:w-1/4 text-grey-text text-[14px] font-medium">
               {exp.year}
             </div>
 
             <div className="w-full lg:w-3/4">
-              <h3 className="text-lg font-semibold mb-1 text-lightest-slate group-hover:text-green-accent">
+              <h2 className="text-lg font-semibold mb-2 lg:mb-0 text-green-accent group-hover:text-green-accent">
                 {exp.title}
-              </h3>
+              </h2>
               <p className="text-grey-text mb-4 leading-relaxed text-[15px]">
                 {exp.description}
               </p>
@@ -63,10 +62,9 @@ const Experience = () => {
         ))}
       </div>
 
-      {/* View Full Resume button, now with controlled margin-top */}
-      <div className="mt-16 text-center lg:text-left"> {/* mt-16 to separate from last experience card */}
+      <div className="mt-16 text-center lg:text-left">
         <a
-          href="/anishshanbhag.pdf" // Adjust this path to your resume file in the public folder
+          href="/anishshanbhag.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center text-green-accent font-semibold text-sm

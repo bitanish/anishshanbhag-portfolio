@@ -4,37 +4,28 @@ const projectsData = [
   {
     id: 1,
     image: "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-    title: "Build a Spotify Connected App",
+    title: "AI Workflow Orchestrator (Multi-Agent LLM System)",
     description:
-      "Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.",
-    link: "#", // Replace with actual project link
-    tags: ["Node", "Express", "React", "Styled Components", "Spotify API"], // Example tags
+      "Implemented a multi-agent system using CrewAI and LangChain with role-specific agents (Researcher, Planner, Writer) collaborating via OpenAI GPT models. Integrated FastAPI backend and React dashboard for workflow execution, reducing manual research effort by 70%.",
+    link: "#", 
+    tags: ["React", "FastAPI", "AWS", "CrewAI", "LangChain", "OpenAI API"], 
   },
   {
     id: 2,
     image: "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-    title: "Another Spotify Connected App", // Changed title for distinction
+    title: "AI Knowledge Retrieval Platform (RAG)",
     description:
-      "This is a duplicated project entry to fulfill the request of having three items. It showcases similar technologies and concepts.",
+      "Built a full-stack RAG platform with document upload, text extraction, chunking, and semantic search via FAISS. Developed React frontend with JWT authentication, FastAPI backend for orchestration, and OpenAI embeddings for retrieval. Achieved sub-2s query latency on 10K+ documents, deployed on AWS with Docker",
     link: "#",
-    tags: ["JavaScript", "APIs", "Web Development"],
-  },
-  {
-    id: 3,
-    image: "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
-    title: "Third Project Example", // Changed title for distinction
-    description:
-      "A third example project, demonstrating the layout and styling. Focuses on front-end development and user interface design principles.",
-    link: "#",
-    tags: ["React", "Tailwind CSS", "UI/UX"],
+    tags: ["React", "FastAPI", "AWS", "RAG", "FAISS", "OpenAI API", "Docker"],
   },
 ];
 
 const Projects = () => {
   return (
     <div className="text-lightest-slate">
-      <h2 className="text-3xl font-bold mb-8 text-white">Projects</h2>
-      <div className="space-y-16"> {/* Vertical spacing between project cards */}
+      <h2 className="text-3xl font-bold mb-8 text-white font-display">Projects</h2>
+      <div className="space-y-16"> 
         {projectsData.map((project) => (
           <a
             key={project.id}
@@ -43,10 +34,9 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="group block rounded-lg overflow-hidden
                        transition-all duration-300 ease-in-out
-                       hover:bg-light-navy hover:shadow-lg" // Card hover effects
+                       hover:bg-light-navy hover:shadow-lg"
           >
             <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8 p-4 lg:p-6">
-              {/* Image Section */}
               <div className="w-full lg:w-1/4 flex-shrink-0">
                 <img
                   src={project.image}
@@ -56,7 +46,6 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Content Section */}
               <div className="w-full lg:w-3/4">
                 <h3 className="text-lg font-semibold mb-1 text-lightest-slate group-hover:text-green-accent">
                   {project.title}

@@ -1,4 +1,3 @@
-// src/components/Sidebar.jsx
 import React from "react";
 
 const Sidebar = ({ activeSection, scrollToSection }) => {
@@ -10,21 +9,13 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
 
   return (
     <div className="h-full bg-[#0a192f] text-white flex flex-col justify-between">
-      {/* Top Section: Name, Title, Short Bio - No photo here anymore */}
       <div>
-        <h1 className="text-4xl font-bold leading-tight">
-          Anish
-          <br />
-          Shanbhag
-        </h1>
-        <h2 className="mt-2 text-lg text-lightest-slate">
-          Full Stack Engineer
-        </h2>
-        <p className="mt-4 text-sm text-lightest-slate">
-          I build accessible, pixel-perfect digital experiences for the web.
+        <h1 className="text-4xl font-bold leading-tight">Anish Shanbhag</h1>
+        <h2 className="mt-2 text-lg font-semibold text-lightest-slate">Full Stack Engineer</h2>
+        <p className="mt-4 text-md font-medium text-lightest-slate leading-snug">
+          I build scalable, secure, and reliable full-stack web applications.
         </p>
 
-        {/* Navigation - Hidden on mobile, visible on large screens */}
         <nav className="hidden lg:block mt-12">
           <ul className="space-y-4 text-sm font-medium">
             {navItems.map((item) => (
@@ -48,11 +39,7 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
                         : "w-8 bg-grey-text group-hover:w-16 group-hover:bg-green-accent"
                     }`}
                   ></div>
-                  <span
-                    className={`${
-                      activeSection === item.id ? "font-bold" : ""
-                    }`}
-                  >
+                  <span className={`${activeSection === item.id ? "font-bold" : ""}`}>
                     {item.label}
                   </span>
                 </a>
@@ -62,15 +49,16 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
         </nav>
       </div>
 
-      {/* Bottom Section: Social Links and Contact Info */}
       <div className="flex flex-col space-y-4 text-sm text-grey-text mt-8 lg:mt-0">
-        {/* Social Links - Still hidden on mobile, visible on large screens */}
-        <div className="hidden lg:flex space-x-4">
-          <a href="#">GitHub</a>
-          <a href="https://www.linkedin.com/in/anishshanbhag/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+        <nav className="hidden lg:flex space-x-4">
+          <a href="https://github.com/bitanish" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/anishshanbhag/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </nav>
 
-        {/* Contact Information - Now visible on all screens */}
         <div className="mt-4 lg:mt-0">
           <p className="flex items-center">
             <span className="mr-2 text-green-accent">
