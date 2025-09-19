@@ -13,33 +13,33 @@ const About = () => {
         />
 
         <p className="mt-0 leading-loose">
-          Hi, I’m Anish, a software engineer with 5 years of experience in
+          Hi, I’m Anish — a software engineer with 5 years of experience in
           <strong> data engineering</strong> and <strong> full-stack development</strong>.
           I enjoy designing and building systems that are scalable, reliable, and secure.
         </p>
 
         <p className="mt-3 leading-loose">
           At <strong>Bluecore</strong>, I worked as a <strong>Senior Software Engineer</strong>,
-          where I built and maintained <strong>100+ ETL workflows in Python and SQL</strong>
+          where I built and maintained <strong>100+ ETL workflows in Python and SQL </strong>
           to process shopper behavior data. I also developed
           <strong> JavaScript integration scripts</strong> used by enterprise retailers like
-          <strong> Nike and CVS</strong>, capturing millions of daily events, and acted as a
-          <strong> technical point-of-contact for client integrations</strong>.
+          <strong> Nike and CVS</strong>, capturing millions of daily events. I served as a
+          <strong> technical point of contact</strong> for client integrations.
         </p>
 
         <p className="mt-3 leading-loose">
           Before that, at <strong>Chariot Group</strong>, I was the sole lead developer for a
           new division called <strong>Chariot Agro</strong>. For Chariot Agro, I built a
           full-stack e-commerce platform with <strong>React, Django, and AWS</strong> that
-          supported over <strong>10,000 monthly transactions</strong>, and deployed it using
+          supported over <strong>10,000 monthly transactions</strong> and deployed it using
           <strong> CI/CD pipelines</strong>.
         </p>
 
         <p className="mt-3 leading-loose">
           I began my career at <strong>LogMeIn</strong>, where I automated network operations
           and reduced downtime investigation from <strong>45 minutes to under 2 minutes</strong>.
-          I bring expertise in <strong>Python, React, SQL, LLMs, and cloud infrastructure</strong>,
-          and I’m passionate about turning complex problems into elegant, high-impact solutions.
+          I bring expertise in <strong>Python, React, SQL, LLMs, and cloud infrastructure </strong>
+          and I am passionate about turning complex problems into elegant, high-impact solutions.
         </p>
       </div>
     </div>

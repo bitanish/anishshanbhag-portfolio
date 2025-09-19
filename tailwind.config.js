@@ -2,12 +2,11 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",   // ✅ Add this
   ],
   theme: {
     extend: {
       fontFamily: {
-        // Ensure 'Inter' is correctly imported and listed first.
-        // This makes Inter the default sans-serif font for your project.
         display: ["Montserrat", "sans-serif"],   // Headings
         body: ["Inter", "sans-serif"],             // Body text
       },

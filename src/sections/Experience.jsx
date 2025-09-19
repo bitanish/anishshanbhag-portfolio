@@ -5,21 +5,21 @@ const experiences = [
     year: "Jun 2023 — May 2025",
     title: "Senior Software Engineer, Forward Deployed · Bluecore",
     description:
-      "At Bluecore, I architected 100+ reliable ETL workflows (Python, SQL), developed JavaScript integrations for Fortune 500 retailers like Nike and CVS capturing millions of daily events, and acted as a technical point-of-contact for client onboarding, monitoring, and integrations.",
-    tags: ["Python", "Javascript", "SQL", "YAML", "Google Cloud"],
+      "At Bluecore, I architected 100+ reliable ETL workflows (Python, SQL), developed JavaScript integrations for Fortune 500 retailers like Nike and CVS capturing millions of daily events, and acted as a technical point of contact for client onboarding, monitoring, and integrations.",
+    tags: ["Python", "JavaScript", "SQL", "YAML", "Google Cloud"],
   },
   {
     year: "Apr 2021 — Jun 2023",
     title: "Software Engineer · Chariot Group",
     description:
-      "At Chariot Group, I led development of a full-stack e-commerce platform (React, Django, AWS) handling 10K+ monthly transactions, deployed scalable cloud infrastructure with CI/CD and AWS Lambda, and implemented secure authentication with OWASP best practices.",
+      "At Chariot Group, I led development of a full-stack e-commerce platform (React, Django, AWS) handling 10K+ monthly transactions, deployed scalable cloud infrastructure with CI/CD and AWS Lambda and implemented secure authentication with OWASP best practices.",
     tags: ["Django", "React", "AWS"],
   },
   {
     year: "Jul 2020 — Nov 2020",
     title: "Associate Software Engineer · LogMeIn",
     description:
-      "At LogMeIn, I automated network operations by building a monitoring dashboard and AWS Lambda functions, reducing downtime investigation from 45 minutes to under 2 minutes.",
+      "At LogMeIn, I automated network operations by building a monitoring dashboard and AWS Lambda functions, reducing downtime investigation time from 45 minutes to under 2 minutes.",
     tags: ["React", "AWS Lambda", "AWS SNS", "AWS Direct Connect"],
   },
 ];
