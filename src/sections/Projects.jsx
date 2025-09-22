@@ -3,20 +3,20 @@ import React from "react";
 const projectsData = [
   {
     id: 1,
-    image: "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+    image: `${process.env.PUBLIC_URL}/project2.png`,
     title: "AI Workflow Orchestrator (Multi-Agent LLM System)",
     description:
       "Implemented a multi-agent system using CrewAI and LangChain with role-specific agents (Researcher, Planner, Writer) collaborating on OpenAI GPT models. Integrated a FastAPI backend and React dashboard for workflow execution, reducing manual research effort by 70%.",
-    link: "#", 
+    link: "https://github.com/bitanish/ai-workflow-orchestrator", 
     tags: ["React", "FastAPI", "AWS", "CrewAI", "LangChain", "OpenAI API"], 
   },
   {
     id: 2,
-    image: "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+    image: `${process.env.PUBLIC_URL}/project1.png`,
     title: "AI Knowledge Retrieval Platform (RAG)",
     description:
       "Built a full-stack RAG platform with document upload, text extraction, chunking, and semantic search using FAISS. Developed a React frontend with JWT authentication, a FastAPI backend for orchestration, and OpenAI embeddings for retrieval. Achieved sub-2s query latency on 10K+ documents and deployed the system on AWS with Docker.",
-    link: "#",
+    link: "https://github.com/bitanish/ai-knowledge-hub",
     tags: ["React", "FastAPI", "AWS", "RAG", "FAISS", "OpenAI API", "Docker"],
   },
 ];
