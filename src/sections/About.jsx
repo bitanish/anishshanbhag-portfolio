@@ -7,7 +7,7 @@ const About = () => {
 
       <div className="leading-relaxed text-[18px] max-w-3xl font-body">
         <img
-          src={`${process.env.PUBLIC_URL}/profile.png`}
+          src={`${process.env.PUBLIC_URL}/profile1.jpg`}
           alt="Anish Shanbhag Profile"
           className="w-44 h-44 rounded-sm object-cover shadow-xl mb-4 md:mb-2 md:float-right md:ml-6"
         />
