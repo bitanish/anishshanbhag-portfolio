@@ -9,10 +9,10 @@ const experiences = [
     tags: ["Python", "JavaScript", "SQL", "YAML", "Google Cloud"],
   },
   {
-    year: "Apr 2021 — Jun 2023",
+    year: "Jan 2021 — Jun 2023",
     title: "Software Engineer · Chariot Group",
     description:
-      "At Chariot Group, I led development of a full-stack e-commerce platform (React, Django, AWS) handling 10K+ monthly transactions, deployed scalable cloud infrastructure with CI/CD and AWS Lambda and implemented secure authentication with OWASP best practices.",
+      "At Chariot Group, I led development of a full-stack e-commerce platform (React, Django, AWS) handling 10K+ monthly transactions and processing 50 lakh+ in sales, deployed scalable cloud infrastructure with CI/CD and AWS Lambda and implemented secure authentication with OWASP best practices.",
     tags: ["Django", "React", "AWS"],
   },
   {

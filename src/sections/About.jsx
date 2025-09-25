@@ -9,7 +9,7 @@ const About = () => {
         <img
           src={`${process.env.PUBLIC_URL}/profile1.jpg`}
           alt="Anish Shanbhag Profile"
-          className="w-44 h-44 rounded-sm object-cover shadow-xl mb-4 md:mb-2 md:float-right md:ml-6"
+          className="w-44 h-44 rounded-sm object-cover shadow-xl mb-2 md:mb-2 md:float-right md:ml-4"
         />
 
         <p className="mt-0 leading-loose">

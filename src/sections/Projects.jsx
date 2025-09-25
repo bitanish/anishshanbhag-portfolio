@@ -3,7 +3,7 @@ import React from "react";
 const projectsData = [
   {
     id: 1,
-    image: `${process.env.PUBLIC_URL}/Project2.png`,
+    image: `${process.env.PUBLIC_URL}/Project2.jpg`,
     title: "AI Workflow Orchestrator (Multi-Agent LLM System)",
     description:
       "Implemented a multi-agent system using CrewAI and LangChain with role-specific agents (Researcher, Planner, Writer) collaborating on OpenAI GPT models. Integrated a FastAPI backend and React dashboard for workflow execution, reducing manual research effort by 70%.",
@@ -12,12 +12,39 @@ const projectsData = [
   },
   {
     id: 2,
-    image: `${process.env.PUBLIC_URL}/Project1.png`,
+    image: `${process.env.PUBLIC_URL}/Project1.jpg`,
     title: "AI Knowledge Retrieval Platform (RAG)",
     description:
       "Built a full-stack RAG platform with document upload, text extraction, chunking, and semantic search using FAISS. Developed a React frontend with JWT authentication, a FastAPI backend for orchestration, and OpenAI embeddings for retrieval. Achieved sub-2s query latency on 10K+ documents and deployed the system on AWS with Docker.",
     link: "https://github.com/bitanish/ai-knowledge-hub",
     tags: ["React", "FastAPI", "AWS", "RAG", "FAISS", "OpenAI API", "Docker"],
+  },
+  {
+    id: 3,
+    image: `${process.env.PUBLIC_URL}/Project3.jpg`,
+    title: "Origin Finder (Chrome Extension)",
+    description:
+      "Developed a Chrome extension that identifies and displays the country of origin for products on Amazon and Flipkart. Launched during the 2020–2021 China–India trade tensions, the tool gained 5,000+ downloads, helping users make informed purchase decisions.",
+    link: "https://github.com/anishshanbhag/Origin-Finder", 
+    tags: ["JavaScript", "Chrome Extension", "Web Scraping", "Product Metadata"],
+  },
+  {
+    id: 4,
+    image: `${process.env.PUBLIC_URL}/Project4.jpg`,
+    title: "API Rate Limiting Gateway",
+    description:
+      "Built a lightweight API gateway implementing token bucket rate-limiting per user and per API, capable of handling 1M+ requests/day with minimal latency overhead. Integrated Redis for distributed state management, JWT for authentication, and enabled dynamic configuration updates with Spring Cloud Config. Designed an admin UI for real-time policy updates.",
+    link: "https://github.com/bitanish/api-gateway-service",
+    tags: ["FastAPI", "Redis", "JWT", "Docker", "Spring Cloud Config", "React"],
+  },
+  {
+    id: 5,
+    image: `${process.env.PUBLIC_URL}/Project5.jpg`,
+    title: "Real-Time Log Analyzer Platform",
+    description:
+      "Developed a Kafka + FastAPI-based log analysis system ingesting 1M+ logs/day with sub-second latency. Implemented full-text search, live tailing, and alerting via Elasticsearch and Prometheus. Built a React dashboard for visualization and monitoring. Dockerized and deployed with CI/CD pipelines.",
+    link: "https://github.com/bitanish/log-analyzer-platform",
+    tags: ["Kafka", "FastAPI", "React", "Elasticsearch", "Prometheus", "Docker", "CI/CD"],
   },
 ];
 
