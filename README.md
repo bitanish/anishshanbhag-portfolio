@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the source code for my personal portfolio website **[anishshanbhag.in](https://www.anishshanbhag.in)**. Built with **React**, the website showcases my professional background, skills, projects, and experiences.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+* **Responsive Design**: Fully responsive across desktop, tablet, and mobile.
+* **Interactive UI**: Smooth animations and effects (e.g., Mouse Spotlight).
+* **Sidebar Navigation**: Quick access to sections (About, Experience, Projects).
+* **Projects Showcase**: Highlights key projects with details.
+* **Modern Frontend Stack**: React + CSS with component-based architecture.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📂 Project Structure
 
-### `npm test`
+```bash
+anishshanbhag-portfolio/
+│
+├── public/                  # Static files (favicon, index.html, etc.)
+├── src/
+│   ├── components/           # Reusable components (Sidebar, MouseSpotlight)
+│   ├── sections/             # Website sections (About, Experience, Projects)
+│   ├── App.js                # Root React component
+│   ├── index.js              # React entry point
+│   ├── index.css             # Global styles
+│   └── ...
+│
+├── package.json              # Dependencies and scripts
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.js        # Tailwind CSS configuration (if used)
+├── README.md
+└── .gitignore
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Frontend**: React (JavaScript)
+* **Styling**: CSS / Tailwind CSS
+* **Build Tool**: Node.js + npm
+* **Deployment**: Hosted at **[anishshanbhag.in](https://www.anishshanbhag.in)**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Setup & Installation
 
-### `npm run eject`
+### 1. Clone Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/bitanish/anishshanbhag-portfolio.git
+cd anishshanbhag-portfolio
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Run Locally
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app will be available at `http://localhost:3000/`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Build for Production
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🌐 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The website is deployed at **[anishshanbhag.in](https://www.anishshanbhag.in)** using a hosting provider (e.g., Vercel, Netlify, or custom server).
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📌 Roadmap
 
-### Advanced Configuration
+* [ ] Add a blog section for technical writing
+* [ ] Add downloadable resume button
+* [ ] Improve SEO & metadata
+* [ ] Add dark mode support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This is my personal portfolio, but suggestions and improvements are welcome. Feel free to open an issue or PR.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📜 License
+
+MIT License – free to adapt for personal use.
